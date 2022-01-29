@@ -6,6 +6,11 @@ module.exports = function check(str, bracketsConfig) {
         count++;
       } else {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
   } else if (bracketsConfig.length === 2) {
@@ -14,10 +19,20 @@ module.exports = function check(str, bracketsConfig) {
         count++;
       } else if (str[i]=== bracketsConfig[0][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[1][0]) {
         count++;
       } else {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
   } else if (bracketsConfig.length === 3) {
@@ -26,14 +41,29 @@ module.exports = function check(str, bracketsConfig) {
         count++;
       } else if (str[i] === bracketsConfig[0][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[1][0]) {
         count++;
       } else if (str[i] === bracketsConfig[1][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[2][0]) {
         count++;
       } else {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
   } else if (bracketsConfig.length === 4) {
@@ -42,18 +72,38 @@ module.exports = function check(str, bracketsConfig) {
         count++;
       } else if (str[i]=== bracketsConfig[0][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[1][0]) {
         count++;
       } else if (str[i] === bracketsConfig[1][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[2][0]) {
         count++;
       } else if (str[i] === bracketsConfig[2][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[3][0]) {
         count++;
       } else {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
   } else if (bracketsConfig.length === 5) {
@@ -62,22 +112,47 @@ module.exports = function check(str, bracketsConfig) {
         count++;
       } else if (str[i]=== bracketsConfig[0][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[1][0]) {
         count++;
       } else if (str[i] === bracketsConfig[1][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[2][0]) {
         count++;
       } else if (str[i] === bracketsConfig[2][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[3][0]) {
         count++;
       } else if (str[i] === bracketsConfig[3][1]) {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       } else if (str[i] === bracketsConfig[4][0]) {
         count++;
       } else {
         count--;
+        if (count < 0) {
+          return false;
+        } else {
+          return true;
+        }
       }
     }
   }
